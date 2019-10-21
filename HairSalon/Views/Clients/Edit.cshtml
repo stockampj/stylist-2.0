@@ -1,0 +1,61 @@
+ @{
+    Layout = "_Layout";
+}
+@model HairSalon.Models.Client
+
+<div class="page-title"></div>
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClientId)
+
+@Html.HiddenFor(model => model.ClientId)
+
+<div class="submit-table form-group">
+      <div class="table-head">
+          <p>Edit Client</p>
+      </div>
+  <div class="table-body">
+      <div class="row">
+          <div class="table-label">
+              <label>First Name</label>
+          </div>
+          <div class="table-input">
+              @Html.EditorFor(model => model.Name_First, new { htmlAttributes = new { @class = "form-control form-input" } })
+          </div>
+      </div>
+      <div class="row">
+          <div class="table-label">
+              <label>Last Name</label>
+          </div>
+          <div class="table-input">
+              @Html.EditorFor(model => model.Name_Last, new { htmlAttributes = new { @class = "form-control form-input" } })
+          </div>
+      </div>
+      <div class="row">
+          <div class="table-label">
+              @Html.LabelFor(model => model.Phone)
+          </div>
+          <div class="table-input">
+              @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control form-input" } })
+          </div>
+      </div>
+      <div class="row">
+          <div class="table-label">
+              @Html.LabelFor(model => model.Stylist)
+          </div>
+          <div class="table-input">
+              @Html.DropDownList("StylistId")
+          </div>
+      </div>
+          <div class="row">
+              <div class="table-label"></div>
+              <div class="table-input">
+                  <input class="btn btn-dark form-submit" type="submit" value="Save"/>
+                  @Html.ActionLink("Delete", "Delete", new { id = Model.ClientId }, new { @class="btn btn-warning form-submit"})
+              </div>
+          </div>
+      </div>
+  </div>
+}
+

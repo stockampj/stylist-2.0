@@ -1,0 +1,46 @@
+@{
+    Layout = "_Layout";
+}
+
+@using HairSalon.Models
+@model List<HairSalon.Models.Client>
+
+<div class="page-title">
+    <h1 class="page-title-font"> Clients</h1>
+</div>
+
+<div class="list-view row">
+
+    @if(@Model.Count == 0)
+    {
+        <div class="list-view-col">
+            <p>There are no clients yet!</p>
+        </div>
+        <div class="list-view-col">        
+            @Html.ActionLink("Add Client", "Create", "Clients", null, new {@class="nav-partial"})
+        </div>
+    }
+
+
+    @foreach (Client client in Model)
+    {
+        <div class="list-view-col">
+            <i class="fas fa-edit list-link"></i>
+            @Html.ActionLink($"{client.Name_First} {client.Name_Last}", "Edit", new {id = client.ClientId}, new {@class="list-link"})
+        </div>
+        <div class="list-view-col">
+            <p class="list-info">@client.Phone</p>
+        </div>
+        <div class="list-view-col">
+            <p class="list-info">@client.Stylist.Name</p>
+        </div>
+    }
+    @if (ViewBag.ClientDependency != "")
+    {
+        <div class="error-message">
+            <p><i class="fas fa-exclamation-triangle"></i> @ViewBag.ClientDependency</p>
+        </div>
+    }
+</div>
+
+

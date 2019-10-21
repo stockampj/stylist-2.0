@@ -1,0 +1,67 @@
+@{
+    Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<div class="page-title"></div>
+
+@if (ViewBag.NoStylistErrorMessage != "")
+{
+    <p>@ViewBag.NoStylistErrorMessage</p>;
+}
+else
+{
+    @using(Html.BeginForm())
+    {
+    @Html.HiddenFor(model => model.ClientId)
+
+        <div class="submit-table form-group">
+            <div class="table-head">
+                <p>Add a Client</p>
+            </div>
+        <div class="table-body">
+            <div class="row">
+                <div class="table-label">
+                    <label>First Name</label>
+                </div>
+                <div class="table-input">
+                    @Html.TextBoxFor(model => model.Name_First, new { @class = "form-control form-input" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-label">
+                    <label>Last Name</label>
+                </div>
+                <div class="table-input">
+                    @Html.TextBoxFor(model => model.Name_Last, new { @class = "form-control form-input" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-label">
+                    @Html.LabelFor(model => model.Phone)
+                </div>
+                <div class="table-input">
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-input" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-label">
+                    @Html.LabelFor(model => model.Stylist)
+                </div>
+                <div class="table-input">
+                    @Html.DropDownList("StylistId")
+                </div>
+            </div>
+                <div class="row">
+                    <div class="table-label"></div>
+                    <div class="table-input">
+                        <input class="btn btn-dark form-submit" type="submit" value="Submit"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+

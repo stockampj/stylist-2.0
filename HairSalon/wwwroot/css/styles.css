@@ -1,0 +1,285 @@
+div#navbar {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:50px;
+  color:#CCCC;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 3%, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%, rgba(255,255,255,0) 97%); 
+  border-bottom: thin solid rgba(255,255,255,.4);
+  padding: 5px;
+  overflow: hidden;
+}
+
+
+.nav-p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+  min-width: 600px;
+}
+
+.navbar-item {
+  display: inline-block;
+  padding-left: 20px;
+  color: rgba(255,255,255,.8);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fas {
+  font-size: .8em;
+}
+
+.navbarLink {
+  color: rgba(255,255,255,.8);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#navbar-spacer {
+  height: 50px;
+}
+
+#title-spacer{
+  height: 100px;
+}
+
+.page-title {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-title-font {
+  float: right;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 5em;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+  padding-right: 20px;
+}
+
+body {
+  background-image: url(../img/lights.jpg);
+  background-position-x: center;
+
+}
+
+
+.table-head {
+  color: rgba(255,255,255,.8);
+  font-size: 1.8em;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.submit-table {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  min-width: 450px;
+  min-height: 375px;
+  background: linear-gradient(90deg, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%);  
+  border: thin solid rgba(255,255,255,.4);
+  Padding: 1.5em;
+  box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+}
+
+
+.table-label {
+  width: 40%;
+  float: left;
+  text-align: right;
+}
+
+.table-input {
+  width: 55%;
+  float: left;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1.5em;
+  padding-right: 1.5em;
+}
+
+input {
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.form-input {
+  background-color: rgba(255,255,255,.3);
+  border: outset white;
+  border-width: .03em;
+  border-radius: .15em;
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  background-color: rgba(255,255,255,.3);
+  font-size: 1.5em;
+  border: outset white;
+  border-width: .02em;
+  border-radius: .12em;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.form-submit {
+  display: inline-block;
+  width: 45%;
+  height: 2.5em;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.btn-warning {
+  background-color: rgb(243, 173, 94);
+  border: rgb(207, 139, 60);
+}
+
+.btn-warning:hover {
+  background-color: rgb(180, 131, 74);
+}
+
+.list-view {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: 375px;
+  background: linear-gradient(90deg, rgba(78,78,78,.3) 15%, rgba(78,78,78,0.5) 49%, rgba(78,78,78,.3) 85%);  
+  border: solid thin rgba(255,255,255,.4);
+  Padding: 1.5em;
+  box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+}
+
+.list-view-col {
+  display: block;
+  width: 30%; 
+  float: left;
+  font-size: 1.6em;
+}
+
+.list-link {
+  color: rgba(255,255,255,.8);
+}
+
+.Title-Font {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 5em;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+a {
+  color: rgba(255,255,255,.8);
+}
+a:hover {
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+  text-shadow: 2px 2px rgba(0,0,0,.1);
+}
+
+.stylist-head {
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 5em;
+  color: rgba(255,255,255,.8);
+  text-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.table-stylist {
+  font-size: 1.5em;
+}
+
+.error-message {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(71, 0, 0);
+}
+
+.splash {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 50%;
+}
+
+
+.splash-background {
+  height: 448px;
+  width: 800px;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 115px;
+  margin-left: -400px;
+  background-image: url(../img/purple-stars1.png);
+  background-position: center center;
+  background-size: cover;
+  -webkit-mask-image: url(../img/stacy1.svg);
+  -webkit-mask-repeat: no-repeat;
+  opacity: .2;
+}
+
+.splash-background-home {
+  height: 448px;
+  width: 800px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 115px;
+  margin-left: -400px;
+  background-image: url(../img/purple-stars1.png);
+  background-position: top;
+  background-size: cover;
+  -webkit-mask-image: url(../img/stacy1.svg);
+  -webkit-mask-repeat: no-repeat;
+  opacity: .7;
+}
+
+.splash-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+  height: 525px;
+  position: relative;
+}
+
+.Title-View {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  text-align: center;
+}
+
+.Title-Name {
+  font-size: 5em;
+  color: rgba(255,255,255, .8);
+  /* text-shadow: 0 -1px 4px #FFF, 0 0px 10px rgb(63, 28, 57), 0 0px 20px #282e4b; */
+  text-shadow: rgb(151, 151, 151) 0px 0px 3px, rgb(255, 255, 255, .6) 0px 0px 10px, rgb(255, 255, 255, .6) 0px 0px 15px, rgb(61, 36, 75, .6) 0px 0px 20px, rgb(61, 36, 75, .6) 0px 0px 30px, rgb(61, 36, 75, .6) 0px 0px 40px, rgb(61, 36, 75, .6) 0px 0px 50px, rgb(61, 36, 75) 0px 0px 75px;
+}
+
+.Title-Tag-View {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Title-Tag {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: rgba(25, 25, 25, 0.7)
+}

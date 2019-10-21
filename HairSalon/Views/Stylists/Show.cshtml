@@ -1,0 +1,50 @@
+@{
+    Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model HairSalon.Models.Stylist;
+<div class="page-title"></div>
+
+
+<div class="submit-table form-group">
+    <div class="stylist-head">
+        <p>@Html.DisplayFor(model => model.Name)</p>
+    </div>
+    <div class="table-body">
+        <div class="row">
+            <div class="table-label">
+                <label>Specialty:</label>
+            </div>
+            <div class="table-stylist">
+                @Html.DisplayFor(model => model.Specialty)
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-label">
+                <label>Clients:</label>
+            </div>
+            <div class="table-stylist">
+                    @if (@Model.Clients.Count == 0)
+                    {
+                        <p>There are no clients for this Stylist</p>
+                    }
+                    <p>
+                    @foreach (Client client in @Model.Clients)
+                    {
+                        @(client.Name_First + " " + client.Name_Last)<br>
+                    }
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-label"></div>
+            <div class="table-input">
+            @Html.ActionLink("Back", "Index", "Stylists", null, new {@class="btn btn-dark form-submit"}) 
+            @Html.ActionLink("Edit", "Edit", new { id = Model.StylistId }, new { @class="btn btn-warning form-submit"})
+            </div>
+      </div>
+    </div>
+</div>
+
+

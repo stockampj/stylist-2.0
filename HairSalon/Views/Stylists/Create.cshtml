@@ -1,0 +1,42 @@
+@{
+    Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<div class="page-title"></div>
+
+@using(Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.StylistId, new {@class = "hidden"})
+
+  <div class="submit-table form-group">
+    <div class="table-head">
+      <p>Add a Stylist</p>
+    </div>
+    <div class="table-body">
+      <div class="row">
+        <div class="table-label">
+          @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="table-input">
+          @Html.TextBoxFor(model => model.Name, new { @class = "form-control form-input" })
+        </div>
+      </div>
+      <div class="row">
+        <div class="table-label">
+          @Html.LabelFor(model => model.Specialty)
+        </div>
+        <div class="table-input">
+          @Html.TextBoxFor(model => model.Specialty, new { @class = "form-control form-input" })
+        </div>
+      </div>  
+      <div class="row">
+        <div class="table-label"></div>
+        <div class="table-input">
+          <input class="btn btn-dark form-submit" type="submit" value="Submit"/>
+        </div>
+      </div>
+    </div class="table-body">
+  </div>
+}
